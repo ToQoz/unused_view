@@ -22,7 +22,7 @@ $ bundle exec rake 'unused_views[users]'
 /Users/toqoz/Projects/ppp/app/views/articles/edit.html.erb
 /Users/toqoz/Projects/ppp/app/views/articles/new.html.erb
 /Users/toqoz/Projects/ppp/app/views/users/create.html.erb
-/Users/toqoz/Projects/ppp/app/views/users/news/edit.html.erb
+/Users/toqoz/Projects/ppp/app/views/users/edit.html.erb
 
 ```
 
