@@ -51,3 +51,12 @@ irb(main):001:0> show_unused_views
 ```
 
 then see list of unused views.
+
+
+## Testing
+
+```sh
+$ cd path-to-unused-view
+$ bundle install
+$ rspec
+```

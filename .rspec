@@ -1,0 +1,2 @@
+--color
+--pattern=spec/lib/**/*_spec.rb
