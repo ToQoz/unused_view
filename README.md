@@ -23,6 +23,8 @@ $ bundle exec rake 'unused_views[users]'
 /Users/toqoz/Projects/ppp/app/views/articles/new.html.erb
 /Users/toqoz/Projects/ppp/app/views/users/create.html.erb
 /Users/toqoz/Projects/ppp/app/views/users/edit.html.erb
+/Users/toqoz/Projects/ppp/app/views/users/_form.html.erb
+/Users/toqoz/Projects/ppp/app/views/shared/_header.html.erb
 
 ```
 
@@ -35,6 +37,8 @@ irb(main):001:0> show_unused_views
 /Users/toqoz/Projects/ppp/app/views/articles/new.html.erb
 /Users/toqoz/Projects/ppp/app/views/users/create.html.erb
 /Users/toqoz/Projects/ppp/app/views/users/edit.html.erb
+/Users/toqoz/Projects/ppp/app/views/users/_form.html.erb
+/Users/toqoz/Projects/ppp/app/views/shared/_header.html.erb
 
 # if you use pry-rails
 [1] pry(main)> show-unused-views
@@ -42,8 +46,8 @@ irb(main):001:0> show_unused_views
 /Users/toqoz/Projects/ppp/app/views/articles/new.html.erb
 /Users/toqoz/Projects/ppp/app/views/users/create.html.erb
 /Users/toqoz/Projects/ppp/app/views/users/edit.html.erb
+/Users/toqoz/Projects/ppp/app/views/users/_form.html.erb
+/Users/toqoz/Projects/ppp/app/views/shared/_header.html.erb
 ```
 
 then see list of unused views.
-
-Now this is not support partial view.
