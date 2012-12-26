@@ -8,7 +8,7 @@ module UnusedView
 
     def find_all
       @controllers.reduce([]) do |views, controller|
-        controller.action_methods.map do |action|
+        views + controller.action_methods.map do |action|
           controller.lookup_context.find(action, controller._prefixes) rescue nil
         end
       end.uniq.compact.map(&:identifier)

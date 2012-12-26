@@ -21,7 +21,13 @@ module UnusedView
           end
         end.compact.map do |vpath|
           File.class_eval do
-            path = vpath.index('/') ? vpath : view
+            if vpath.index('/')
+              path = ApplicationController.view_paths.map do |view_path|
+                File.join(view_path.to_s, vpath)
+              end.select { |f| File.exists?(File.dirname(f)) }.first || vpath
+            else
+              path = view
+            end
             filename = "_#{basename(vpath)}.#{basename(view).split('.')[1..-1].join('.')}"
             expand_path(join(dirname(path), filename)).to_s
           end

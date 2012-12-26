@@ -13,7 +13,10 @@ describe UnusedView::PartialView do
   describe '#find_all' do
     let(:views) { [ Rails.root.join('app/views/test/new.html.erb').to_s ] }
     let(:partials) {
-      [ Rails.root.join('app/views/test/_piyo.html.erb').to_s ]
+      [
+        Rails.root.join('app/views/test/_piyo.html.erb').to_s,
+        Rails.root.join('app/views/shared/_hogessu.html.erb').to_s
+      ]
     }
     let(:unused_partials) {
       [ Rails.root.join('app/views/test/_unused.html.erb').to_s ]
@@ -22,7 +25,10 @@ describe UnusedView::PartialView do
       views.each do |v|
         FileUtils.mkdir_p(File.dirname(v)) unless File.directory? File.dirname(v)
         File.open(v, 'w+') { |f|
-          f.write '<% render "piyo" %>'
+          f.write <<-EOS
+            <% render "piyo" %>'
+            <% render "shared/hogessu" %>
+          EOS
         }
       end
       partials.each do |v|
